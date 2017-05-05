@@ -3,12 +3,14 @@
 var finalArray = [];
 
 
-//Replaces Multiples of Three!
+//Replaces Multiples of Three and Five!
 
 var divThree = function(userNum) {
   for (currentNum = 1; currentNum <= userNum; currentNum +=1) {
     if (currentNum <= userNum) {
-      if (currentNum % 3 === 0) {
+      if (currentNum % 5 === 0) {
+        finalArray.push("pong");
+      } else if (currentNum % 3 === 0) {
         finalArray.push("ping");
       } else {
         finalArray.push(currentNum);
@@ -17,6 +19,21 @@ var divThree = function(userNum) {
   };
   return finalArray;
 };
+
+// //Replaces Multiples of Three!
+//
+// var divThree = function(userNum) {
+//   for (currentNum = 1; currentNum <= userNum; currentNum +=1) {
+//     if (currentNum <= userNum) {
+//       if (currentNum % 3 === 0) {
+//         finalArray.push("ping");
+//       } else {
+//         finalArray.push(currentNum);
+//       }
+//     };
+//   };
+//   return finalArray;
+// };
 
 
 // User Interface Logic
