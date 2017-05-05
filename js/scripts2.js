@@ -2,15 +2,17 @@
 
 var finalArray = [];
 
+// Replaces multiples of 3, 5, and 15!
 
-//Replaces Multiples of Three and Five!
-
-var divThree = function(userNum) {
+var divisibleBy = function(userNum) {
   for (currentNum = 1; currentNum <= userNum; currentNum +=1) {
-    if (currentNum <= userNum) {
-      if (currentNum % 5 === 0) {
+  	if (currentNum <= userNum) {
+
+      if (currentNum % 15 === 0) {
+        finalArray.push("PING-PONG");
+      } else if ((currentNum % 5 === 0) && (currentNum % 3 !== 0)) {
         finalArray.push("pong");
-      } else if (currentNum % 3 === 0) {
+      } else if ((currentNum % 3 === 0) && (currentNum % 5 !== 0)) {
         finalArray.push("ping");
       } else {
         finalArray.push(currentNum);
@@ -19,6 +21,24 @@ var divThree = function(userNum) {
   };
   return finalArray;
 };
+
+
+//Replaces Multiples of Three and Five!
+//
+// var divThreeFive = function(userNum) {
+//   for (currentNum = 1; currentNum <= userNum; currentNum +=1) {
+//     if (currentNum <= userNum) {
+//       if (currentNum % 5 === 0) {
+//         finalArray.push("pong");
+//       } else if (currentNum % 3 === 0) {
+//         finalArray.push("ping");
+//       } else {
+//         finalArray.push(currentNum);
+//       }
+//     };
+//   };
+//   return finalArray;
+// };
 
 // //Replaces Multiples of Three!
 //
@@ -51,7 +71,7 @@ $(document).ready(function () {
     // $("span#result").text(finalArray);
 
     // Output
-    var result = divThree(userNum);
+    var result = divisibleBy(userNum);
     $("span#result").text(finalArray);
 
   });
