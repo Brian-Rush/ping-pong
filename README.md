@@ -16,7 +16,7 @@ The program can count up to the provided number. | 2 | [1, 2]
 The program can replace numbers divisible by 3 with "ping" | 3 | [1, 2, ping]
 The program can replace numbers divisible by 5 with "pong" | 10 | [1, 2, ping, 4, pong, ping, 7, 8, ping, pong]
 The program can replace numbers divisible by 15 with "ping-pong" | 15 | [1, 2, ping, 4, pong, ping, 7, 8, ping, pong, 11, ping, 13, 14, ping-pong]
-The program can receive a new number without reloading the page and give new results without showing the old results | {old:} 6 / {new:} 4 | [1, 2, ping, 4]
+The program can receive a new number without reloading the page and give new results without showing the old results | <ul><li>{old:} 6</li><li>{new:} 4</li></ul> | <ul><li>[1, 2, ping, 4, pong, ping]</li><li>[1, 2, ping, 4] (NOT: [1, 2, ping, 4, pong, ping, 1, 2, ping, 4])</li></ul>
 
 
 ## Setup/Installation Requirements
