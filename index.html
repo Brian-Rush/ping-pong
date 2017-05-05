@@ -4,25 +4,41 @@
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
     <link href="css/styles.css" rel="stylesheet" type="text/css">
     <script src="js/jquery-3.2.1.js"></script>
-    <script src="js/scripts.js"></script>
+    <!-- <script src="js/scripts.js"></script> -->
+    <script src="js/scripts2.js"></script>
     <title>Ping! Pong!</title>
   </head>
+
   <body>
     <div class="container">
-      <h1>Ping! Pong!</h1>
+      <!-- Jumbotron -->
+      <header class="jumbotron">
+        <h1>Ping! Pong!</span></h1>
+      </header>
 
-      <form id="user-number">
-        <div class="form-group">
-          <label for="num">Enter a number</label>
-          <input id="num" type="text">
+      <!-- Form Row -->
+      <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+          <form id="user-number">
+            <div class="form-group">
+              <label for="num">Enter a number</label>
+              <input id="num" type="text">
+            </div>
+            <button type="submit" class="btn">Let's do some pongy counting!</button>
+          </form>
         </div>
-
-        <button type="submit" class="btn">Let's do some pongy counting!</button>
-      </form>
-      <div>
-        <p><span id="result"></span></p>
       </div>
-    </div>
 
+      <!-- Results Row -->
+      <div class=row>
+        <div class="col-md-10 col-md-offset-1">
+          <div class="well">
+            <p><span id="result"></span></p>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
   </body>
 </html>
