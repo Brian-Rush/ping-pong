@@ -61,14 +61,11 @@ var divisibleBy = function(userNum) {
 $(document).ready(function () {
   $("form#user-number").submit(function (event) {
     event.preventDefault();
-    // $('#result').empty();
+    $("span#result").text("");
+
 
     // Get Input
     var userNum = parseInt($("#num").val());
-
-    // // Output
-    // var result = divisibleBy(userNum);
-    // $("span#result").text(finalArray);
 
     // Output
     var result = divisibleBy(userNum);
