@@ -6,7 +6,6 @@ var finalArray = [];
 
 var divisibleBy = function(userNum) {
   for (currentNum = 1; currentNum <= userNum; currentNum +=1) {
-  	if (currentNum <= userNum) {
 
       if (currentNum % 15 === 0) {
         finalArray.push("PING-PONG");
@@ -17,7 +16,6 @@ var divisibleBy = function(userNum) {
       } else {
         finalArray.push(currentNum);
       }
-    };
   };
   return finalArray;
 };
