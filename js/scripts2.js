@@ -1,10 +1,10 @@
 // Business Logic
 
-var finalArray = [];
 
 // Replaces multiples of 3, 5, and 15!
 
 var divisibleBy = function(userNum) {
+  var finalArray = [];
   for (currentNum = 1; currentNum <= userNum; currentNum +=1) {
     if (currentNum % 15 === 0) {
       finalArray.push(" PING-PONG");
@@ -55,17 +55,22 @@ var divisibleBy = function(userNum) {
 
 // User Interface Logic
 
-$(document).ready(function () {
-  $("form#user-number").submit(function (event) {
+$(document).ready(function () {  
+  $('#num').focus();
+  $("#user-number").submit(function (event) {
     event.preventDefault();
-    $("span#result").text("");
+    $("#output").empty();
 
     // Get Input
     var userNum = parseInt($("#num").val());
 
     // Output
     var result = divisibleBy(userNum);
-    $("span#result").text(finalArray);
+    result.forEach(function(num) {
+      $("#output").append("<li>" + num + "</li>");
+    });
 
+    // Clear previous Output
   });
+
 });
