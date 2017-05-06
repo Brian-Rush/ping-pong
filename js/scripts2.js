@@ -6,16 +6,15 @@ var finalArray = [];
 
 var divisibleBy = function(userNum) {
   for (currentNum = 1; currentNum <= userNum; currentNum +=1) {
-
-      if (currentNum % 15 === 0) {
-        finalArray.push("PING-PONG");
-      } else if ((currentNum % 5 === 0) && (currentNum % 3 !== 0)) {
-        finalArray.push("pong");
-      } else if ((currentNum % 3 === 0) && (currentNum % 5 !== 0)) {
-        finalArray.push("ping");
-      } else {
-        finalArray.push(currentNum);
-      }
+    if (currentNum % 15 === 0) {
+      finalArray.push(" PING-PONG");
+    } else if ((currentNum % 5 === 0) && (currentNum % 3 !== 0)) {
+      finalArray.push(" pong");
+    } else if ((currentNum % 3 === 0) && (currentNum % 5 !== 0)) {
+      finalArray.push(" ping");
+    } else {
+      finalArray.push(" " + currentNum);
+    }
   };
   return finalArray;
 };
@@ -60,7 +59,6 @@ $(document).ready(function () {
   $("form#user-number").submit(function (event) {
     event.preventDefault();
     $("span#result").text("");
-
 
     // Get Input
     var userNum = parseInt($("#num").val());
